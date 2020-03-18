@@ -1,0 +1,8 @@
+[Unit]
+Description=Service to start the power detection for Dashcam
+After=syslog.target network.target
+[Service]
+ExecStart=/root/scripts/pwr-headunit.py
+Restart=on-abort
+[Install]
+WantedBy=multi-user.target
